@@ -38,6 +38,7 @@ echo ($countryPlace["First_Prize"]);
 echo "<br>";
 echo "<br>";
 
+// while loop
 
 $i = 5;
 while ($i >= 1) {
@@ -48,8 +49,31 @@ while ($i >= 1) {
 // Types of Printing output in php 
 
 $some = "All is Well";
+$num = 5;
 
-echo "$some Hi, How are You";
+echo "$some Hi, How are You <br>";
+print($some);
+echo "<br>";
+printf('Hey, How are You %s', $some);
+echo "<br>";
+printf('Hey, How are You %s %d', $some, $num);
+
+echo "<br>";
+
+//Global Variable
+
+$y = 5;
+
+function add($z){
+  global $y;
+  echo $y + $z;
+}
+
+add(5);
+
+echo "<br>";
+
+echo add(5);
 
 
 
