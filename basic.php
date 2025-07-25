@@ -46,6 +46,15 @@ while ($i >= 1) {
   $i--;
 }
 
+//do-while-loop
+
+$i=0;
+
+do{
+  echo "Thank you for assisting us; Please Wait";
+  $i++;
+}while($i == 2);
+
 // Types of Printing output in php 
 
 $some = "All is Well";
@@ -76,7 +85,70 @@ echo "<br>";
 echo add(5);
 
 
+// PHP Functions 
+
+function greet($x){
+  echo $x ."Hello 🙌";
+}
+
+// Referencing a Variable inside the function with "&" ;
+
+function refered(&$x){
+  $x *= 5;
+  echo $x;
+}
+
+$num = 5;
+refered($num); //Output: 25
+
+
+//Variatic Function
+
+// This function receives unknown number of arguments 
+// This function becomes an argument
+// THis Argument should be the last argument if it is combined and gave with two arguments (e.g)=> function add($x, ...$y)
+
+function addMultiple(...$result){
+  $x = 0;
+  $length = count($result);
+  for($i=0; $i <= $length; $i++){
+    $x *= $result[$i];
+  }
+  echo $x;
+  return $x;
+}
+
+addMultiple(5,6,7,8,10,5);
+
+
+// Array 
+
+// Adding items to Indexed Array
+
+$fruits = ["Apple", "Orange"];
+
+$fruits[1]= "Pineapple";
+array_push($fruits, "Bannana");
+
+// Associative Array
+
+//For associative arrays array_push(); cannot be used;
+
+//Instead we can use array_merge();
+
+
+
+$vegetables = ["Name"=>"Dayaash", "Age"=>24];
+
+$vegetables += [
+  "Area" => "SS COLONy";
+];
+
+unset($vegetables["Name"]);
+
 
 
 ?>
+
+
 
