@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <title>THE BATTLE BETWEEN AI VS HUMAN</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      .navbar-brand {
+        font-size: 30px;
+        color: #00bfff; /* Tech blue */
+        text-decoration: none;
+      }
+      .container-fluid {
+        text-align: center;
+      }
+      .Apara {
+        font-size: 20px;
+        color: rgb(60, 97, 191);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .card h3 {
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      .card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .cards-row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px; /* gap between cards */
+        margin: 20px auto;
+        width: 90%;
+      }
+      .card h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #efe3e3;
+      }
+      .card p {
+        color: #eee7e7;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+      }
+      /* Card mb3 and image */
+      .card.mb-3 {
+        width: 90%;
+        margin: 20px auto;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .card.mb-3 img {
+        border-radius: 20px;
+        height: 309px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .card.mb-3 .card-body p {
+        color: white;
+        text-align: center;
+        margin: 10px 0;
+      }
+      .vs img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: right;
+      }
+      .vs p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: left;
+      }
+      .vs p:last-child {
+        color: #c1b0b0;
+      }
+      .vsa img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: left;
+      }
+      .vsa p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: right;
+      }
+      .vsa p:last-child {
+        color: #c1b0b0;
+      }
+
+      .vsb img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: right;
+      }
+      .vsb p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: left;
+      }
+      .vsb p:last-child {
+        color: #c1b0b0;
+      }
+      .vsc img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: left;
+      }
+      .vsc p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: right;
+      }
+      .vsc p:last-child {
+        color: #c1b0b0;
+      }
+
+      .vsd img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: right;
+      }
+      .vsd p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: left;
+      }
+      .vsd p:last-child {
+        color: #c1b0b0;
+      }
+
+      .vse img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: left;
+      }
+      .vse p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: right;
+      }
+      .vse p:last-child {
+        color: #c1b0b0;
+      }
+      .vsf img {
+        height: 163px;
+        width: 236px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+        float: right;
+      }
+      .vsf p {
+        color: #6495ed; /* cornflowerblue */
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        text-align: left;
+        clear: left;
+      }
+      .vsf p:last-child {
+        color: #c1b0b0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar sticky-top bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">The Battle of Wits : AI Vs Human</a>
+      </div>
+    </nav>
+    <div class="card mb-3">
+      <img
+        src="1 card.png"
+        class="card-img-top"
+        alt="aivs human"
+        style="
+          height: 436px;
+          width: 80%;
+          background-size: cover;
+          border-radius: 20px;
+          margin-left: 127px;
+        "
+      />
+      <div class="card-body">
+        <p class="card-text" style="color: white; text-align: center">
+          the Battle between ai and human
+        </p>
+      </div>
+    </div>
+    <p class="Apara">
+      The battle between AI and humans is less about war and more about balance.
+      AI brings unmatched speed, precision, and efficiency, while humans hold
+      creativity, empathy, and moral judgment. Where AI excels at data and
+      automation, humans thrive in imagination and ethical choices. The true
+      challenge is not one overpowering the other, but learning how to
+      collaborate—where machines enhance human potential instead of replacing
+      it.
+    </p>
+    <div class="cards-row" style="margin-left: 129px">
+      <div class="card">
+        <img
+          src="ai.png"
+          alt="AI"
+          style="
+            height: 17%;
+            width: 58%;
+            margin-top: 33px;
+            border-radius: 26px;
+            border: 4px solid #007bff;
+          "
+        />
+        <h3>Ai</h3>
+      </div>
+
+      <div class="card">
+        <img
+          src="aivshuman.png"
+          alt="Ai vs Human"
+          style="
+            height: 17%;
+            width: 58%;
+            margin-top: 33px;
+            border-radius: 26px;
+            border: 4px solid #007bff;
+          "
+        />
+        <h3>AI VS HUMAN</h3>
+      </div>
+
+      <div class="card">
+        <img
+          src="human.png"
+          alt="Human"
+          style="
+            height: 17%;
+            width: 58%;
+            margin-top: 33px;
+            border-radius: 26px;
+            border: 4px solid #007bff;
+          "
+        />
+        <h3>HUMAN</h3>
+      </div>
+    </div>
+    <div class="vs">
+      <h1 style="color: aqua">Intuition vs Algorithm</h1>
+      <img src="intution vs algorithm.png" alt="Imagination vs Processing" />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Instinct</strong> refers to the natural, innate behaviors and
+        responses that humans (and animals) have without conscious thought. It’s
+        an automatic, often emotional reaction shaped by evolution and
+        experience. For example, a human’s gut feeling or immediate reaction to
+        danger is instinctive.
+      </p>
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Programming</strong> refers to the set of instructions or code
+        that defines how an AI system operates. AI behaves according to
+        algorithms and rules written by humans, processing data logically and
+        systematically without feelings or intuition.
+      </p>
+    </div>
+    <div class="vsa">
+      <h1 style="color: aqua">consiousness vs automation</h1>
+      <img
+        src="consiousness vs automation.png"
+        alt="Imagination vs Processing"
+      />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Instinct</strong> refers to the natural, innate behaviors and
+        responses that humans (and animals) have without conscious thought. It’s
+        an automatic, often emotional reaction shaped by evolution and
+        experience. For example, a human’s gut feeling or immediate reaction to
+        danger is instinctive.
+      </p>
+      <p style="margin-top: 50px; font-size: 20px">
+        <strong>Programming</strong> refers to the set of instructions or code
+        that defines how an AI system operates. AI behaves according to
+        algorithms and rules written by humans, processing data logically and
+        systematically without feelings or intuition.
+      </p>
+    </div>
+
+    <div class="vsb">
+      <h1 style="color: aqua; margin-top: 0">emotion vs logic</h1>
+      <img src="emotion vs logic.png" alt="emotion vs logic" />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>emotion</strong> refers to the natural, innate behaviors and
+        responses that humans (and animals) have without conscious thought. It’s
+        an automatic, often emotional reaction shaped by evolution and
+        experience. For example, a human’s gut feeling or immediate reaction to
+        danger is instinctive.
+      </p>
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>logic</strong> refers to the set of instructions or code that
+        defines how an AI system operates. AI behaves according to algorithms
+        and rules written by humans, processing data logically and
+        systematically without feelings or intuition.
+      </p>
+    </div>
+    <div class="vsc">
+      <h1 style="color: aqua; margin-top: 0">creativity vs computation</h1>
+      <img src="creative vs computation.png" alt="emotion vs logic" />
+      <p style="margin-top: 50px; font-size: 20px">
+        <strong>creative</strong> Creativity thrives on imagination,
+        originality, and thinking beyond set patterns.
+      </p>
+      <p style="margin-bottom: 50px; font-size: 20px">
+        <strong>computation</strong> Computation, however, follows strict rules,
+        processing information with accuracy. Where creativity invents new
+        ideas, computation helps in refining and executing them.
+      </p>
+    </div>
+    <div class="vsd">
+      <h1 style="color: aqua; margin-top: 0">Empathy vs Data</h1>
+      <img src="Empathy vs Data.png" alt="Empathy vs Data" />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Empathy</strong> Empathy connects humans emotionally, allowing
+        us to understand and share feelings.
+      </p>
+
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Data</strong> Data, in contrast, is objective, presenting facts
+        and patterns without emotional context. Together, they can guide
+        decisions that are both informed and compassionate. data is like fuel—it
+        trains algorithms, sharpens predictions, and enables automation. Without
+        data, AI cannot “learn” or improve, since it relies on large datasets to
+        recognize patterns and make accurate choices.
+      </p>
+    </div>
+    <div class="vse">
+      <h1 style="color: aqua; margin-top: 0">Imagination vs Processing</h1>
+      <img
+        src="imaggination vs processing.png"
+        alt="Imagination vs Processing"
+      />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Imagination</strong> Imagination is the universe inside the
+        human mind — a space where dragons fly, cities float in the sky, and
+        problems turn into possibilities.
+      </p>
+      <p style="margin-bottom: 74px; font-size: 20px">
+        <strong>Processing</strong> Processing, however, is the careful
+        architect, sorting through information, ensuring the castles we imagine
+        don’t collapse. Imagination dreams; processing delivers.
+      </p>
+    </div>
+    <div class="vsf">
+      <h1 style="color: aqua; margin-top: 0">Instinct vs Programming</h1>
+      <img src="Intuition vs. Algorithm a.png" alt="Instinct vs Programming" />
+      <p style="margin-top: 0px; font-size: 20px">
+        <strong>Instinct</strong> Instinct is ancient, primal — the survival
+        code written into our very bones. It’s fast, raw, and sometimes
+        irrational, yet it saves lives.
+      </p>
+      <p style="margin-bottom: 74px; font-size: 20px">
+        Programming is modern, logical — crafted by humans to teach machines
+        what to do, step by step. Instinct reacts without thinking; programming
+        executes without feeling. Both, in their own way, are nature’s and
+        humanity’s versions of code.
+        <strong>Programming</strong>
+      </p>
+    </div>
+  </body>
+</html>

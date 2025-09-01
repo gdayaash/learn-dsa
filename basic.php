@@ -141,10 +141,38 @@ array_push($fruits, "Bannana");
 $vegetables = ["Name"=>"Dayaash", "Age"=>24];
 
 $vegetables += [
-  "Area" => "SS COLONy";
+  "Area" => "SS COLONY"
 ];
 
 unset($vegetables["Name"]);
+
+
+
+
+// PHP OOPS 
+
+class fruit {
+  
+  //Properties
+  public $name;
+  public $color;
+
+  //Methods
+  function set_name($name){
+    $this->name = $name;
+  }
+
+  function get_name(){
+    return $this->name;
+  }
+
+
+}  
+
+$apple = new Fruit();
+$banana = new Fruit();
+$apple->set_name('Apple');
+$banana->set_name('Banana');
 
 
 
