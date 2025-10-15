@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .subcount,
+    .addcount,
+    .addstep,
+    .substep {
+      padding: 20px 25px;
+      background-color: bisque;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+  </style>
+  <body>
+    <section class="container">
+      <main class="inner">
+        <article class="step">
+          <span class="substep">-</span>
+          <span>Step <strong id="step">1</strong></span>
+          <span class="addstep">+</span>
+        </article>
+      </main>
+
+      <main class="inner">
+        <article class="step">
+          <span class="subcount">-</span>
+          <span>Count <strong id="count">0</strong></span>
+          <span class="addcount">+</span>
+        </article>
+      </main>
+
+      <main>
+        <p class="output">Today is Wed 15 October 2025</p>
+      </main>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
